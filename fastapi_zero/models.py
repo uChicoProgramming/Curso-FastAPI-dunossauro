@@ -8,8 +8,6 @@ table_registry = registry()  # registramos
 
 # todas as coisas que queremos que sejam objetos
 # como tabelas do Banco de Dados
-
-
 # obejots python que representam a tabela do
 # banco de dados
 @table_registry.mapped_as_dataclass
