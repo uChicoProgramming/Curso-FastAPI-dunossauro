@@ -1,13 +1,19 @@
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
-
 from fastapi_zero.settings import Settings
 
 settings = Settings()
 
-if settings.DATABASE_URL.startswith('postgres://'):
+# --- CORREÇÃO MAIS ROBUSTA PARA O FLY.IO ---
+# Verifica se a URL já tem o driver asyncpg. Se não tiver, forçamos a troca.
+# Tratamos tanto 'postgres://' quanto 'postgresql://'
+if "postgresql+asyncpg" not in settings.DATABASE_URL:
     settings.DATABASE_URL = settings.DATABASE_URL.replace(
-        'postgres://', 'postgresql+asyncpg://', 1
+        "postgres://", "postgresql+asyncpg://"
     )
+    settings.DATABASE_URL = settings.DATABASE_URL.replace(
+        "postgresql://", "postgresql+asyncpg://"
+    )
+# -------------------------------------------
 
 engine = create_async_engine(settings.DATABASE_URL)
 
