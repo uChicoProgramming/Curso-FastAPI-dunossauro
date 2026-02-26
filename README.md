@@ -34,11 +34,10 @@ A API possui as seguintes rotas principais:
    ```bash
    git clone https://github.com/uChicoProgramming/Curso-FastAPI-dunossauro
 
-2. **Ative o ambiente virtual e instale as dependencias
+2. **Ative o ambiente virtual e instale as dependencias:**
    ```bash
    poetry shell
 
-   ```bash
    poetry install
 
 3. **Configura as Variáveis de Ambiente:**
@@ -75,3 +74,4 @@ A aplicação está configurada para deploy contínuo no Fly.io. As variáveis d
 ambiente (como DATABASE_URL) são gerenciadas via Fly Secrets para garantir a 
 segurança das credenciais, e a conexão com o banco de dados em produção 
 utiliza a rede interna (.flycast).
+
