@@ -1,5 +1,8 @@
 # FastAPI Zero 🚀
 
+🌐 **Live Demo:** [Acesse a documentação da API aqui](https://fastapi-zero-chico.fly.dev/docs) 
+*(Nota: O servidor entra em hibernação por inatividade. O primeiro acesso pode levar entre 5 e 10 segundos para carregar).*
+
 Uma API RESTful moderna e assíncrona desenvolvida com FastAPI para gerenciamento de usuários e tarefas (To-Dos), com sistema de autenticação. 
 
 Este projeto foi construído e aprimorado com base no curso "FastAPI do Zero", focando em boas práticas de desenvolvimento web com Python.
@@ -74,4 +77,5 @@ A aplicação está configurada para deploy contínuo no Fly.io. As variáveis d
 ambiente (como DATABASE_URL) são gerenciadas via Fly Secrets para garantir a 
 segurança das credenciais, e a conexão com o banco de dados em produção 
 utiliza a rede interna (.flycast).
+
 
